@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Restaurant Menu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .tabs {
+        display: flex;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+
+      .tab {
+        padding: 10px 20px;
+        margin-right: 5px;
+        background-color: #f1f1f1;
+        border-radius: 5px 5px 0 0;
+        border: 1px solid #ccc;
+      }
+
+      .tab.active {
+        background-color: #fff;
+        border-bottom: none;
+      }
+
+      .tab-content {
+        border: 1px solid #ccc;
+        padding: 20px;
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      .menu-item-name {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Restaurant Menu</h1>
+
+    <div class="tabs">
+      <div class="tab active" data-tab="appetizer">Appetizer</div>
+      <div class="tab" data-tab="main-course">Main Course</div>
+      <div class="tab" data-tab="dessert">Dessert</div>
+    </div>
+
+    <div id="appetizer" class="tab-content active">
+      <ul>
+        <li>
+          <span class="menu-item-name">Bruschetta</span> - Grilled bread with
+          tomato and basil
+        </li>
+        <li>
+          <span class="menu-item-name">Stuffed Mushrooms</span> - Filled with
+          cheese and herbs
+        </li>
+      </ul>
+    </div>
+
+    <div id="main-course" class="tab-content">
+      <ul>
+        <li>
+          <span class="menu-item-name">Grilled Salmon</span> - With lemon butter
+          sauce
+        </li>
+        <li>
+          <span class="menu-item-name">Ribeye Steak</span> - Served with mashed
+          potatoes
+        </li>
+      </ul>
+    </div>
+
+    <div id="dessert" class="tab-content">
+      <ul>
+        <li>
+          <span class="menu-item-name">Cheesecake</span> - Creamy and rich with
+          a graham cracker crust
+        </li>
+        <li>
+          <span class="menu-item-name">Chocolate Lava Cake</span> - Gooey center
+          with vanilla ice cream
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const tabs = document.querySelectorAll(".tab");
+      const contents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // Remove active class from all tabs and contents
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => c.classList.remove("active"));
+
+          // Add active class to selected tab and its content
+          tab.classList.add("active");
+          document
+            .getElementById(tab.getAttribute("data-tab"))
+            .classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
