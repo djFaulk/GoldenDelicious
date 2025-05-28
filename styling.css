@@ -7,9 +7,7 @@ body {
   height: 100%; /* Ensure the body and html take up the full height */
   margin: 0;
 }
-header {
-  position: sticky;
-}
+
 html {
   width: 100%;
 }
@@ -32,28 +30,18 @@ html {
   padding: 10px;
 }
 
-.carousel-inner {
-  display: flex;
-
-  align-items: center;
-  overflow: hidden;
+.event-title {
+  width: fit-content;
 }
 
-.carousel-item {
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
-}
-
-.card.small {
-  max-width: 18rem;
-  cursor: pointer; /* Makes the card clickable */
+.card.event {
+  height: calc(100% - 32px);
   transition: transform 0.3s ease-in-out;
   margin: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.card.small:hover {
+.card.event:hover {
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
@@ -139,7 +127,7 @@ li {
 .banner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .logo_img {
