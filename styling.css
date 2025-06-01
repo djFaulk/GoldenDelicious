@@ -37,7 +37,7 @@ html {
 .card.event {
   height: calc(100% - 32px);
   transition: transform 0.3s ease-in-out;
-  margin: 2rem;
+  margin: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -131,19 +131,9 @@ li {
 }
 
 .logo_img {
+  max-width: 100%;
+  height: auto;
   max-height: 14rem;
-}
-
-.logo_img:hover {
-  cursor: pointer;
-}
-.hamburger_menu {
-  color: #dca03e;
-  font-size: 3rem;
-}
-
-.hamburger_menu:hover {
-  cursor: pointer;
 }
 
 #gallery .card {
@@ -158,43 +148,4 @@ li {
 
 #gallery.scrollable_container {
   scroll-behavior: smooth;
-}
-
-/* Style the navigation menu */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-  display: flex;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-  align-self: center;
-}
-
-/* Style navigation menu links */
-.topnav a {
-  float: left;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a.icon {
-  float: right;
-}
-
-/* Add a grey background color on mouse-over */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the active link (or home/logo) */
-.topnav.active {
-  background-color: #04aa6d;
-  color: white;
 }
